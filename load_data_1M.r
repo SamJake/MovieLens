@@ -8,7 +8,14 @@ read_file2 <- function(file_path)
 
 
 
-movies2 <- read_file2("C:/Soft/R/Data/ml-1m/movies.csv")
-ratings2 <- read_file2("C:/Soft/R/Data/ml-1m/ratings.csv")
-users2 <- read_file2("C:/Soft/R/Data/ml-1m/users.csv")
+movies <- read_file2("C:/Soft/R/Data/ml-1m/movies.csv")
+ratings <- read_file2("C:/Soft/R/Data/ml-1m/ratings.csv")
+users <- read_file2("C:/Soft/R/Data/ml-1m/users.csv")
+age <- read.csv("C:/Soft/R/Data/ml-1m/age.csv", header = FALSE)
+job <- read.csv("C:/Soft/R/Data/ml-1m/job.csv", header = FALSE)
 
+names(movies) <- c("MovieID","Title","Genres")
+names(ratings) <- c("UserID","MovieID","Rating","Timestamp")
+names(users) <- c("UserID","Gender","Age","Occupation","Zip-code")
+names(age) <- c("Age","Category")
+names(job) <- c("Job","Category")
