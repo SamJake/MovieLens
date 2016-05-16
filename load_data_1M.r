@@ -16,6 +16,8 @@ job <- read.csv("C:/Soft/R/Data/ml-1m/job.csv", header = FALSE)
 
 names(movies) <- c("MovieID","Title","Genres")
 names(ratings) <- c("UserID","MovieID","Rating","Timestamp")
-names(users) <- c("UserID","Gender","Age","Occupation","Zip-code")
-names(age) <- c("Age","Category")
-names(job) <- c("Job","Category")
+names(users) <- c("UserID","Gender","Age","Occupation","ZipCode")
+names(age) <- c("Age","AgeRange")
+names(job) <- c("Occupation","Job")
+
+ratings$Timestamp <- as.POSIXct(ratings$Timestamp,origin = "1970-01-01")
