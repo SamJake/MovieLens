@@ -1,0 +1,23 @@
+mov2 <- mov
+#for(i in 1:nrow(mov2))
+for(i in 1:5)
+{
+  mov2[i]$Action <- grep("Action",mov2[i,]$Genres)
+  mov2[i]$Adventure <- grep("Adventure",mov2[i,]$Genres)
+  mov2[i]$Animation <- grep("Animation",mov2[i,]$Genres)
+  mov2[i]$Children <- grep("Children's",mov2[i,]$Genres)
+  mov2[i]$Comedy <- grep("Comedy",mov2[i,]$Genres)
+  mov2[i]$Crime <- grep("Crime",mov2[i,]$Genres)
+  mov2[i]$Documentary <- grep("Documentary",mov2[i,]$Genres)
+  mov2[i]$Drama <- grep("Drama",mov2[i,]$Genres)
+  mov2[i]$Fantasy <- grep("Fantasy",mov2[i,]$Genres)
+  mov2[i]$FilmNoir <- grep("Film-Noir",mov2[i,]$Genres)
+  mov2[i]$Horror <- grep("Horror",mov2[i,]$Genres)
+  mov2[i]$Musical <- grep("Musical",mov2[i,]$Genres)
+  mov2[i]$Mystery <- grep("Mystery",mov2[i,]$Genres)
+  mov2[i]$Romance <- grep("Romance",mov2[i,]$Genres)
+  mov2[i]$SciFi <- grep("Sci-Fi",mov2[i,]$Genres)
+  mov2[i]$Thriller <- grep("Thriller",mov2[i,]$Genres)
+  mov2[i]$War <- grep("War",mov2[i,]$Genres)
+  mov2[i]$Western <- grep("Western",mov2[i,]$Genres)
+} 
