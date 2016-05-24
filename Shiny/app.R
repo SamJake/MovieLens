@@ -2,28 +2,32 @@
 library("shiny")
 
 ui <- fluidPage(
-    titlePanel("MovieLens Analytics"),
+    titlePanel(title = h1("MovieLens Analytics", align="center")),
+    br(),
+    br(),
+    br(),
+    br(),
     sidebarLayout(
     sidebarPanel(
     selectInput(inputId = "movie",
                 label = "Select movie to analyize consumer behaviour", 
-                choices = mov2$MovieID)
+                choices = setNames(mov2$MovieID,mov2$Title))
+      
     ),
     mainPanel(
-    plotOutput(outputId = "analytics", height = "400px")
+    plotOutput(outputId = "analytics", height = "400px", width = "800px"),
+    verbatimTextOutput("out")
     )
     )
 )
 
 server <- function(input,output) 
 {
-  #df <- reactive({movie_analytics(input$movie)})
-  #data <- reactive({plot_analytics(df,"Toy story")})
-  #output$analytics <- renderPlot({data})
+  output$out <- renderPrint(input$movie)
+  df <- movie_analytics(165)
+  mov_plt <- plot_analytics(df,"Little Women")
+  output$analytics <- renderPlot(mov_plt)
   
-  df <- movie_analytics(261)
-  data <- plot_analytics(df,"Little Women")
-  output$analytics <- renderPlot(data)
 }
 
 shinyApp(ui= ui, server = server)
