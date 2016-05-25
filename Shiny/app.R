@@ -15,18 +15,18 @@ ui <- fluidPage(
       
     ),
     mainPanel(
-    plotOutput(outputId = "analytics", height = "400px", width = "800px"),
-    verbatimTextOutput("out")
+    plotOutput(outputId = "analytics", height = "400px", width = "800px")
     )
     )
 )
 
 server <- function(input,output) 
 {
-  output$out <- renderPrint(input$movie)
-  df <- movie_analytics(165)
-  mov_plt <- plot_analytics(df,"Little Women")
-  output$analytics <- renderPlot(mov_plt)
+  output$analytics <- renderPlot({
+    df <- movie_analytics(input$movie)
+    p <- plot_analytics(df,"Viewer Watching Behavior")
+    print(p)
+  })
   
 }
 
