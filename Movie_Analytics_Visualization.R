@@ -1,11 +1,11 @@
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 
 plot_analytics <- function(df,Title)
 {
-g <- ggplot(df,aes(x=factor(df$AgeRange),y=df$Average)) + geom_bar(position="dodge",width=0.7,stat="identity",aes(fill=factor(df$Gender)))
-g <- g + xlab("") + ylab("Ratings") + ggtitle(Title) 
-g <- g + coord_cartesian(ylim = c(3,5)) + scale_fill_discrete(name="Gender")
+  g <- ggplot(df, aes(x=factor(df$AgeRange),y=df$Average)) + geom_bar(width=0.5,stat="identity",position="dodge",aes(fill=factor(df$Gender))) + scale_fill_discrete(name="Gender") 
+  g <- g + coord_flip(ylim = c(2.5,5))
+  g <- g + xlab("Age/Gender") + ylab("Ratings") + ggtitle(Title) 
 }
 
 df <- movie_analytics(1240)
@@ -26,9 +26,5 @@ g
 
 
 df <- movie_analytics(296)
-g <- plot_analytics(df,"Pulp Fiction")
-g
-
-df <- movie_analytics(364)
 g <- plot_analytics(df,"Pulp Fiction")
 g

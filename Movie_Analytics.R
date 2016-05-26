@@ -1,4 +1,4 @@
-install.packages("sqldf")
+#install.packages("sqldf")
 library(sqldf)
 
 #id <- 1721 #Titanic
