@@ -15,17 +15,32 @@ ui <- fluidPage(
       
     ),
     mainPanel(
-    plotOutput(outputId = "analytics", height = "400px", width = "800px")
+      tabsetPanel(
+        tabPanel("Plot",plotOutput(outputId = "plot", height = "400px", width = "800px")),
+        tabPanel("Table",tableOutput(outputId = "table"))
+      )
     )
-    )
+    ),
+fluidRow(class="footer",
+         HTML('<BR><BR><BR><BR><HR>
+              <P align="center"><B>DIGITAL / BUSINESS CONSULTING / TECHNOLOGY      
+              <a href="http://www.synechron.com/sitemap">SITEMAP</a>     
+                <a href="https://cert.webtrust.org/soc3_synechron.html">SOC3</a>     
+                <a href="http://www.synechron.com/privacypolicy">PRIVACY POLICY</a>      
+                2016 SYNECHRON. ALL RIGHTS RESERVED.</B></P>'))
+    
 )
 
 server <- function(input,output) 
 {
-  output$analytics <- renderPlot({
+  output$plot <- renderPlot({
     df <- movie_analytics(input$movie)
     p <- plot_analytics(df,"Viewer Watching Behavior")
     print(p)
+  })
+  output$table <- renderTable({
+    df <- movie_analytics(input$movie)
+    print(df)
   })
   
 }
