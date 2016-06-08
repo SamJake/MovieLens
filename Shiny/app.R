@@ -1,7 +1,7 @@
 #install.packages("shiny")
 library("shiny")
 
-ui <- fluidPage(
+ui <- fluidPage(theme = "new1.css",
     titlePanel(title = h1("MovieLens Analytics", align="center")),
     br(),
     br(),
@@ -23,12 +23,24 @@ ui <- fluidPage(
     ),
 fluidRow(class="footer",
          HTML('<BR><BR><BR><BR><HR>
-              <P align="center"><B>DIGITAL / BUSINESS CONSULTING / TECHNOLOGY      
-              <a href="http://www.synechron.com/sitemap">SITEMAP</a>     
-                <a href="https://cert.webtrust.org/soc3_synechron.html">SOC3</a>     
-                <a href="http://www.synechron.com/privacypolicy">PRIVACY POLICY</a>      
-                2016 SYNECHRON. ALL RIGHTS RESERVED.</B></P>'))
-    
+<footer>
+  <div class="copyright_panel">
+      <ul>
+        <li>
+          <a href="http://www.synechron.com/sitemap" title="">Sitemap</a>
+        </li>
+        <li>
+          <a href="https://cert.webtrust.org/soc3_synechron.html" target="_blank" title="">SOC3</a>
+        </li>
+        <li>
+          <a href="http://www.synechron.com/privacypolicy" title="">Privacy policy</a>
+        </li>
+        <li>
+          &copy; 2016 Synechron.  All Rights Reserved.
+        </li>
+    </ul>
+  </div>
+</footer>'))
 )
 
 server <- function(input,output) 
