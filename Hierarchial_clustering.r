@@ -69,3 +69,10 @@ colMeans(subset(mov3[5:22],cluster1_group == 1)
          
 movie_splitup <- split(mov3[5:22],cluster1_group)    
 sapply(movie_splitup,colMeans)
+
+
+group12 <- 12
+cluster_12 <- subset(mov3,cluster1_group==group12)
+nrow(cluster_12)
+cluster_12$Title[1:25]
+cluster_12[1:25,1:3]
