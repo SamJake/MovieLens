@@ -25,13 +25,7 @@ fluidRow(class="footer",
          HTML('<BR><BR><BR><BR><HR>
 <footer>
     <aside class="foot-left">
-              <span>&copy; All Rights Reserved.</span> <a href="mailto:EAG-Support@synechron.com">Contact Us</a>
-              </aside>
-              <aside class="foot-right">
-              <a href="https://twitter.com/synechroninc" title="Twitter" target="_blank"  class="twitter">&nbsp;</a>
-              <a href="http://www.youtube.com/user/SynechronInc" title="Youtube" target="_blank" class="youtube">&nbsp;</a>
-              <a href="https://www.facebook.com/synechrontechnologies" title="Facebook" target="_blank"  class="facebook">&nbsp;</a>
-              <a href="http://www.linkedin.com/company/synechron" title="Linkedin" target="_blank" class="in">&nbsp;</a>
+              <span>&copy; 2016 Synechron. All rights reserved.</span> <a href="http://www.synechron.com/contactus#get-in-touch">Contact Us</a>
               </aside>
               </footer>'))
 )

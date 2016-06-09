@@ -3,13 +3,3 @@ footer{background:#dddddd; max-height:38px; border-top:solid 1px #bebebe; width:
 .foot-left{float:left; line-height:16px; margin-top:5px; padding-left:12px;}
 .foot-left a{color:#424242; float:left;}
 .foot-left span{float:left; padding-right:10px; margin-right:10px; border-right:solid 1px #aaa;}
-.foot-right{float:right; padding-right:12px;}
-.foot-right a{background:url(images/social.png) left top no-repeat; height:26px; width:26px; margin-right:2px; float:left;}
-.foot-right a.twitter{background-position:0 0;}
-.foot-right a.youtube{background-position:-27px 0;}
-.foot-right a.facebook{background-position:-54px 0;}
-.foot-right a.in{background-position:-81px 0;}
-.foot-right a.twitter:hover{background-position:0 -27px;}
-.foot-right a.youtube:hover{background-position:-27px -27px;}
-.foot-right a.facebook:hover{background-position:-54px -27px;}
-.foot-right a.in:hover{background-position:-81px -27px;}
