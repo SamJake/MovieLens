@@ -65,3 +65,7 @@ bat_rows <- bat_cluster[grep("Batman",bat_cluster$Title),]
 
 
 colMeans(subset(mov3[5:22],cluster1_group == 1)
+         
+         
+movie_splitup <- split(mov3[5:22],cluster1_group)    
+sapply(movie_splitup,colMeans)
