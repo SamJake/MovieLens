@@ -1,5 +1,4 @@
 footer{background:#dddddd; max-height:38px; border-top:solid 1px #bebebe; width:100%; padding:6px 0; position:fixed; bottom:0; z-index:99;}
-.foot-logo{float:right; margin:9px 20px 0 0;}
 .foot-left{float:left; line-height:16px; margin-top:5px; padding-left:12px;}
 .foot-left a{color:#424242; float:left;}
 .foot-left span{float:left; padding-right:10px; margin-right:10px; border-right:solid 1px #aaa;}
