@@ -61,3 +61,7 @@ batman_group <- cluster1_group[589]
 bat_cluster <- subset(mov3,cluster1_group==batman_group)
 bat_cluster$Title[1:25]
 bat_rows <- bat_cluster[grep("Batman",bat_cluster$Title),]
+
+
+
+colMeans(subset(mov3[5:22],cluster1_group == 1)
