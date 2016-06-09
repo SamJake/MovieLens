@@ -52,3 +52,12 @@ plot(cluster1)
 plot(cluster2)
 plot(cluster3)
 plot(cluster4)
+
+
+cluster1_group <- cutree(cluster1, k = 12)
+subset(mov3,Title=="Batman")
+
+batman_group <- cluster1_group[589]
+bat_cluster <- subset(mov3,cluster1_group==batman_group)
+bat_cluster$Title[1:25]
+bat_rows <- bat_cluster[grep("Batman",bat_cluster$Title),]
