@@ -40,3 +40,15 @@ for(i in 1:18)
 {
   print(paste(genre_names[i]," ",a[i]))
 }
+
+
+cluster1 <- hclust(distances,method="ward.D")
+cluster2 <- hclust(distances,method="ward.D2")
+cluster3 <- hclust(distances,method="complete")
+cluster4 <- hclust(distances,method="single")
+
+
+plot(cluster1)
+plot(cluster2)
+plot(cluster3)
+plot(cluster4)
