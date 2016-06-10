@@ -41,6 +41,7 @@ for(i in 1:18)
   print(paste(genre_names[i]," ",a[i]))
 }
 
+distances <- dist(mov3[5:22],method="euclidean")
 
 cluster1 <- hclust(distances,method="ward.D")
 cluster2 <- hclust(distances,method="ward.D2")
@@ -83,3 +84,16 @@ cluster_10 <- subset(mov3,cluster1_group==group10)
 nrow(cluster_10)
 cluster_10$Title
 cluster_10[1:25,1:3]
+
+
+
+
+
+
+users2 <- users_updated
+udistances <- dist(users2[2:5],method="euclidean")
+uclust1 <- hclust(udistances,method = "ward.D")
+
+
+users2
+
