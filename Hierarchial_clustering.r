@@ -55,7 +55,7 @@ plot(cluster4)
 
 
 cluster1_group <- cutree(cluster1, k = 12)
-subset(mov3,Title=="Batman")
+subset(mov3[,1:5],Title=="Batman")
 
 batman_group <- cluster1_group[589]
 bat_cluster <- subset(mov3,cluster1_group==batman_group)
@@ -64,7 +64,7 @@ bat_rows <- bat_cluster[grep("Batman",bat_cluster$Title),]
 
 
 
-colMeans(subset(mov3[5:22],cluster1_group == 1)
+colMeans(subset(mov3[5:22],cluster1_group == 1))
          
          
 movie_splitup <- split(mov3[5:22],cluster1_group)    
@@ -76,3 +76,10 @@ cluster_12 <- subset(mov3,cluster1_group==group12)
 nrow(cluster_12)
 cluster_12$Title[1:25]
 cluster_12[1:25,1:3]
+
+
+group10 <- 10
+cluster_10 <- subset(mov3,cluster1_group==group10)
+nrow(cluster_10)
+cluster_10$Title
+cluster_10[1:25,1:3]
